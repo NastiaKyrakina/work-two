@@ -26,15 +26,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*import all style*/
 /*List for media*/
 /*Common variables*/
 /*Common mixin*/
-html {
-  height: 100%; }
-
 body {
-  width: 100%;
   background-image: linear-gradient(to right, rgba(111, 111, 111, 0.4), rgba(9, 9, 9, 0.4), rgba(0, 0, 0, 0.4));
   font-family: Roboto, serif;
   margin: 0 0 20px 0; }
@@ -82,6 +77,11 @@ button {
     display: flex;
     -ms-flex-flow: column;
         flex-flow: column; }
+  .row-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
   .row-between {
     -ms-flex-pack: justify;
         justify-content: space-between; }
@@ -303,7 +303,7 @@ nav {
 
 .chart-line {
   background-color: #000033;
-  width: 80;
+  width: 80vw;
   height: 20px; }
   @media screen and (max-width: 850px) {
     .chart-line {
@@ -322,309 +322,579 @@ nav {
 
 .user-1 .line-1 .chart-1 {
   display: inline-block;
-  width: 33.17919vw;
-  background-color: #30ff00; }
+  width: 32.56684vw;
+  height: 20px;
+  background-color: #30ff00;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-1 .line-1 .chart-1:hover {
     background-color: #83ff66; }
-    .user-1 .line-1 .chart-1:hover span {
-      display: inline; }
+    .user-1 .line-1 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "task resolved 87";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-1 .line-1 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-1 .line-1 .chart-1 {
       display: block;
-      height: 33.17919vh;
-      width: 20px; } }
-  .user-1 .line-1 .chart-1:after {
-    content: "82";
-    padding-left: 2%; }
+      height: 32.56684vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-1 .line-1 .chart-2 {
   display: inline-block;
-  width: 15.37572vw;
-  background-color: #30ff00; }
+  width: 35.93583vw;
+  height: 20px;
+  background-color: #30ff00;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-1 .line-1 .chart-2:hover {
     background-color: #83ff66; }
-    .user-1 .line-1 .chart-2:hover span {
-      display: inline; }
+    .user-1 .line-1 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "project resolved 96";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-1 .line-1 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-1 .line-1 .chart-2 {
       display: block;
-      height: 15.37572vh;
-      width: 20px; } }
-  .user-1 .line-1 .chart-2:after {
-    content: "38";
-    padding-left: 2%; }
+      height: 35.93583vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-1 .line-2 .chart-1 {
   display: inline-block;
-  width: 6.47399vw;
-  background-color: #00fffa; }
+  width: 34.06417vw;
+  height: 20px;
+  background-color: #00fffa;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-1 .line-2 .chart-1:hover {
     background-color: #66fffc; }
-    .user-1 .line-2 .chart-1:hover span {
-      display: inline; }
+    .user-1 .line-2 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "critical bug fixed 91";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-1 .line-2 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-1 .line-2 .chart-1 {
       display: block;
-      height: 6.47399vh;
-      width: 20px; } }
-  .user-1 .line-2 .chart-1:after {
-    content: "16";
-    padding-left: 2%; }
+      height: 34.06417vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-1 .line-2 .chart-2 {
   display: inline-block;
-  width: 40.0578vw;
-  background-color: #00fffa; }
+  width: 2.24599vw;
+  height: 20px;
+  background-color: #00fffa;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-1 .line-2 .chart-2:hover {
     background-color: #66fffc; }
-    .user-1 .line-2 .chart-2:hover span {
-      display: inline; }
+    .user-1 .line-2 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "bug fixed 6";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-1 .line-2 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-1 .line-2 .chart-2 {
       display: block;
-      height: 40.0578vh;
-      width: 20px; } }
-  .user-1 .line-2 .chart-2:after {
-    content: "99";
-    padding-left: 2%; }
+      height: 2.24599vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-1 .line-3 .chart-1 {
   display: inline-block;
-  width: 21.84971vw;
-  background-color: #2600ff; }
+  width: 27.3262vw;
+  height: 20px;
+  background-color: #2600ff;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-1 .line-3 .chart-1:hover {
     background-color: #7d66ff; }
-    .user-1 .line-3 .chart-1:hover span {
-      display: inline; }
+    .user-1 .line-3 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "worlds saved 73";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-1 .line-3 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-1 .line-3 .chart-1 {
       display: block;
-      height: 21.84971vh;
-      width: 20px; } }
-  .user-1 .line-3 .chart-1:after {
-    content: "54";
-    padding-left: 2%; }
+      height: 27.3262vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-1 .line-3 .chart-2 {
   display: inline-block;
-  width: 6.06936vw;
-  background-color: #2600ff; }
+  width: 20.96257vw;
+  height: 20px;
+  background-color: #2600ff;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-1 .line-3 .chart-2:hover {
     background-color: #7d66ff; }
-    .user-1 .line-3 .chart-2:hover span {
-      display: inline; }
+    .user-1 .line-3 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "villains defeated 56";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-1 .line-3 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-1 .line-3 .chart-2 {
       display: block;
-      height: 6.06936vh;
-      width: 20px; } }
-  .user-1 .line-3 .chart-2:after {
-    content: "15";
-    padding-left: 2%; }
+      height: 20.96257vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-2 .line-1 .chart-1 {
   display: inline-block;
-  width: 28.3237vw;
-  background-color: #30ff00; }
+  width: 34.81283vw;
+  height: 20px;
+  background-color: #30ff00;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-2 .line-1 .chart-1:hover {
     background-color: #83ff66; }
-    .user-2 .line-1 .chart-1:hover span {
-      display: inline; }
+    .user-2 .line-1 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "task resolved 93";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-2 .line-1 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-2 .line-1 .chart-1 {
       display: block;
-      height: 28.3237vh;
-      width: 20px; } }
-  .user-2 .line-1 .chart-1:after {
-    content: "70";
-    padding-left: 2%; }
+      height: 34.81283vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-2 .line-1 .chart-2 {
   display: inline-block;
-  width: 26.30058vw;
-  background-color: #30ff00; }
+  width: 19.83957vw;
+  height: 20px;
+  background-color: #30ff00;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-2 .line-1 .chart-2:hover {
     background-color: #83ff66; }
-    .user-2 .line-1 .chart-2:hover span {
-      display: inline; }
+    .user-2 .line-1 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "project resolved 53";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-2 .line-1 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-2 .line-1 .chart-2 {
       display: block;
-      height: 26.30058vh;
-      width: 20px; } }
-  .user-2 .line-1 .chart-2:after {
-    content: "65";
-    padding-left: 2%; }
+      height: 19.83957vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-2 .line-2 .chart-1 {
   display: inline-block;
-  width: 10.11561vw;
-  background-color: #00fffa; }
+  width: 12.72727vw;
+  height: 20px;
+  background-color: #00fffa;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-2 .line-2 .chart-1:hover {
     background-color: #66fffc; }
-    .user-2 .line-2 .chart-1:hover span {
-      display: inline; }
+    .user-2 .line-2 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "critical bug fixed 34";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-2 .line-2 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-2 .line-2 .chart-1 {
       display: block;
-      height: 10.11561vh;
-      width: 20px; } }
-  .user-2 .line-2 .chart-1:after {
-    content: "25";
-    padding-left: 2%; }
+      height: 12.72727vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-2 .line-2 .chart-2 {
   display: inline-block;
-  width: 8.90173vw;
-  background-color: #00fffa; }
+  width: 29.19786vw;
+  height: 20px;
+  background-color: #00fffa;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-2 .line-2 .chart-2:hover {
     background-color: #66fffc; }
-    .user-2 .line-2 .chart-2:hover span {
-      display: inline; }
+    .user-2 .line-2 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "bug fixed 78";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-2 .line-2 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-2 .line-2 .chart-2 {
       display: block;
-      height: 8.90173vh;
-      width: 20px; } }
-  .user-2 .line-2 .chart-2:after {
-    content: "22";
-    padding-left: 2%; }
+      height: 29.19786vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-2 .line-3 .chart-1 {
   display: inline-block;
-  width: 8.90173vw;
-  background-color: #2600ff; }
+  width: 8.98396vw;
+  height: 20px;
+  background-color: #2600ff;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-2 .line-3 .chart-1:hover {
     background-color: #7d66ff; }
-    .user-2 .line-3 .chart-1:hover span {
-      display: inline; }
+    .user-2 .line-3 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "worlds saved 24";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-2 .line-3 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-2 .line-3 .chart-1 {
       display: block;
-      height: 8.90173vh;
-      width: 20px; } }
-  .user-2 .line-3 .chart-1:after {
-    content: "22";
-    padding-left: 2%; }
+      height: 8.98396vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-2 .line-3 .chart-2 {
   display: inline-block;
-  width: 37.22543vw;
-  background-color: #2600ff; }
+  width: 18.71658vw;
+  height: 20px;
+  background-color: #2600ff;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-2 .line-3 .chart-2:hover {
     background-color: #7d66ff; }
-    .user-2 .line-3 .chart-2:hover span {
-      display: inline; }
+    .user-2 .line-3 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "villains defeated 50";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-2 .line-3 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-2 .line-3 .chart-2 {
       display: block;
-      height: 37.22543vh;
-      width: 20px; } }
-  .user-2 .line-3 .chart-2:after {
-    content: "92";
-    padding-left: 2%; }
+      height: 18.71658vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-3 .line-1 .chart-1 {
   display: inline-block;
-  width: 11.7341vw;
-  background-color: #30ff00; }
+  width: 5.9893vw;
+  height: 20px;
+  background-color: #30ff00;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-3 .line-1 .chart-1:hover {
     background-color: #83ff66; }
-    .user-3 .line-1 .chart-1:hover span {
-      display: inline; }
+    .user-3 .line-1 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "task resolved 16";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-3 .line-1 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-3 .line-1 .chart-1 {
       display: block;
-      height: 11.7341vh;
-      width: 20px; } }
-  .user-3 .line-1 .chart-1:after {
-    content: "29";
-    padding-left: 2%; }
+      height: 5.9893vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-3 .line-1 .chart-2 {
   display: inline-block;
-  width: 36.41618vw;
-  background-color: #30ff00; }
+  width: 23.58289vw;
+  height: 20px;
+  background-color: #30ff00;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-3 .line-1 .chart-2:hover {
     background-color: #83ff66; }
-    .user-3 .line-1 .chart-2:hover span {
-      display: inline; }
+    .user-3 .line-1 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "project resolved 63";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-3 .line-1 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-3 .line-1 .chart-2 {
       display: block;
-      height: 36.41618vh;
-      width: 20px; } }
-  .user-3 .line-1 .chart-2:after {
-    content: "90";
-    padding-left: 2%; }
+      height: 23.58289vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-3 .line-2 .chart-1 {
   display: inline-block;
-  width: 31.56069vw;
-  background-color: #00fffa; }
+  width: 22.45989vw;
+  height: 20px;
+  background-color: #00fffa;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-3 .line-2 .chart-1:hover {
     background-color: #66fffc; }
-    .user-3 .line-2 .chart-1:hover span {
-      display: inline; }
+    .user-3 .line-2 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "critical bug fixed 60";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-3 .line-2 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-3 .line-2 .chart-1 {
       display: block;
-      height: 31.56069vh;
-      width: 20px; } }
-  .user-3 .line-2 .chart-1:after {
-    content: "78";
-    padding-left: 2%; }
+      height: 22.45989vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-3 .line-2 .chart-2 {
   display: inline-block;
-  width: 38.43931vw;
-  background-color: #00fffa; }
+  width: 37.05882vw;
+  height: 20px;
+  background-color: #00fffa;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-3 .line-2 .chart-2:hover {
     background-color: #66fffc; }
-    .user-3 .line-2 .chart-2:hover span {
-      display: inline; }
+    .user-3 .line-2 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "bug fixed 99";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-3 .line-2 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-3 .line-2 .chart-2 {
       display: block;
-      height: 38.43931vh;
-      width: 20px; } }
-  .user-3 .line-2 .chart-2:after {
-    content: "95";
-    padding-left: 2%; }
+      height: 37.05882vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-3 .line-3 .chart-1 {
   display: inline-block;
-  width: 36.41618vw;
-  background-color: #2600ff; }
+  width: 32.94118vw;
+  height: 20px;
+  background-color: #2600ff;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-3 .line-3 .chart-1:hover {
     background-color: #7d66ff; }
-    .user-3 .line-3 .chart-1:hover span {
-      display: inline; }
+    .user-3 .line-3 .chart-1:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "worlds saved 88";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-3 .line-3 .chart-1:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-3 .line-3 .chart-1 {
       display: block;
-      height: 36.41618vh;
-      width: 20px; } }
-  .user-3 .line-3 .chart-1:after {
-    content: "90";
-    padding-left: 2%; }
+      height: 32.94118vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 .user-3 .line-3 .chart-2 {
   display: inline-block;
-  width: 23.87283vw;
-  background-color: #2600ff; }
+  width: 37.05882vw;
+  height: 20px;
+  background-color: #2600ff;
+  transition: background-color 400ms ease-in-out;
+  position: relative;
+  border-right: 2px solid #000033; }
   .user-3 .line-3 .chart-2:hover {
     background-color: #7d66ff; }
-    .user-3 .line-3 .chart-2:hover span {
-      display: inline; }
+    .user-3 .line-3 .chart-2:hover::after {
+      background-color: #9898aa;
+      border-radius: 3px;
+      padding: 2px;
+      top: -23px;
+      left: 3px;
+      position: absolute;
+      content: "villains defeated 99";
+      min-width: 140px; }
+      @media screen and (max-width: 500px) {
+        .user-3 .line-3 .chart-2:hover::after {
+          top: 0;
+          left: -80px;
+          transform: rotate(-90deg); } }
   @media screen and (max-width: 500px) {
     .user-3 .line-3 .chart-2 {
       display: block;
-      height: 23.87283vh;
-      width: 20px; } }
-  .user-3 .line-3 .chart-2:after {
-    content: "59";
-    padding-left: 2%; }
+      height: 37.05882vh;
+      width: 20px;
+      border-right: none;
+      border-bottom: 2px solid #000033; } }
 
 @media screen and (max-width: 500px) {
   .charts.row {
@@ -656,56 +926,59 @@ nav {
 /*change the number of points*/
 .num-1:after {
   visibility: hidden;
-  content: "0";
+  content: "23";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .num-2:after {
-  content: "21";
+  content: "46";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .num-3:after {
-  content: "43";
+  content: "70";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .num-4:after {
-  content: "64";
+  content: "93";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .num-5:after {
-  content: "86";
+  content: "116";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .num-6:after {
-  content: "108";
+  content: "140";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .num-7:after {
-  content: "129";
+  content: "163";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .num-8:after {
-  content: "151";
+  content: "187";
   display: inline-block;
   padding: 12px 5px 0 0; }
 
 .numeration {
-  width: 80;
+  width: 80vw;
   margin-top: 20px; }
   @media screen and (max-width: 850px) {
     .numeration {
       width: 70vw; } }
 
-@media screen and (max-width: 450px) {
-  .join-form.row {
-    -ms-flex-flow: column;
-        flex-flow: column; } }
+.join-form.row {
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+  @media screen and (max-width: 450px) {
+    .join-form.row {
+      -ms-flex-flow: column;
+          flex-flow: column; } }
 
 @media screen and (max-width: 450px) {
   fieldset .row {
@@ -714,15 +987,25 @@ nav {
 
 .about {
   margin: 0 5px;
+  padding: 0 20px;
   border-right: 2px dashed #1d3232;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column;
-      flex-flow: column; }
+      flex-flow: column;
+  -ms-flex-pack: center;
+      justify-content: center; }
   .about img {
     display: block;
-    max-width: 300px;
-    margin: auto; }
+    max-width: 100%;
+    min-width: 150px;
+    margin: auto;
+    padding: 10px; }
+  .about h2 {
+    font-size: 1.3em;
+    padding: 0 0 1em 0; }
+  .about p {
+    padding: 0 0 10px 0; }
 
 form {
   margin: 0 7%;
@@ -736,7 +1019,15 @@ label, legend {
   font-size: 1.1em; }
 
 fieldset {
-  padding: 10px; }
+  padding: 10px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+
+fieldset label {
+  -ms-flex: 1 1 150px;
+      flex: 1 1 150px; }
 
 input[type='text'],
 input[type='email'] {
@@ -753,10 +1044,6 @@ input[type='email'] {
       flex-flow: column; }
   .elem-name input[type='text'] {
     text-transform: uppercase; }
-
-fieldset label {
-  margin: 20px;
-  padding: 10px; }
 
 .decorated-radio, .decorated-check {
   margin: 3px 5px -4px 0;
@@ -791,146 +1078,3 @@ input[type='radio']:checked + .decorated-radio::before {
 
 input[type='checkbox']:checked + .decorated-check::before {
   border-radius: 2px; }
-
-a, a:active, a:hover, a:visited {
-  color: purple;
-  text-decoration: none;
-  margin-left: 5px;
-  display: block; }
-
-a:hover, a:active {
-  color: black; }
-
-.tile, .tile-orange-0, .tile-green-0, .tile-orange-1, .tile-green-1, .tile-orange-2, .tile-green-2, .tile-orange-3, .tile-green-3, .tile-orange-4, .tile-green-4, .tile-orange-5, .tile-green-5 {
-  height: 30px;
-  margin: 1px;
-  white-space: nowrap;
-  transition: 0.5s all ease;
-  color: yellow;
-  font-weight: 700; }
-
-.container {
-  background-color: black;
-  border: 1px solid mediumpurple; }
-  .container .inline {
-    display: inline-block; }
-
-.tile-orange-0 {
-  background-color: mediumpurple;
-  width: 131px; }
-  .tile-orange-0:after {
-    content: "0"; }
-  .tile-orange-0:hover {
-    background-color: #8d5eed; }
-
-.tile-green-0 {
-  background-color: lime;
-  width: 16px; }
-  .tile-green-0:after {
-    content: "0"; }
-  .tile-green-0:hover {
-    background-color: lime; }
-
-.tile-orange-1 {
-  background-color: rgba(147, 112, 219, 0.833333);
-  width: 70px; }
-  .tile-orange-1:after {
-    content: "1"; }
-  .tile-orange-1:hover {
-    background-color: #8d5eed; }
-
-.tile-green-1 {
-  background-color: rgba(0, 255, 0, 0.833333);
-  width: 12px; }
-  .tile-green-1:after {
-    content: "1"; }
-  .tile-green-1:hover {
-    background-color: lime; }
-
-.tile-orange-2 {
-  background-color: rgba(147, 112, 219, 0.666667);
-  width: 103px; }
-  .tile-orange-2:after {
-    content: "2"; }
-  .tile-orange-2:hover {
-    background-color: #8d5eed; }
-
-.tile-green-2 {
-  background-color: rgba(0, 255, 0, 0.666667);
-  width: 38px; }
-  .tile-green-2:after {
-    content: "2"; }
-  .tile-green-2:hover {
-    background-color: lime; }
-
-.tile-orange-3 {
-  background-color: rgba(147, 112, 219, 0.5);
-  width: 115px; }
-  .tile-orange-3:after {
-    content: "3"; }
-  .tile-orange-3:hover {
-    background-color: #8d5eed; }
-
-.tile-green-3 {
-  background-color: rgba(0, 255, 0, 0.5);
-  width: 23px; }
-  .tile-green-3:after {
-    content: "3"; }
-  .tile-green-3:hover {
-    background-color: lime; }
-
-.tile-orange-4 {
-  background-color: rgba(147, 112, 219, 0.333333);
-  width: 109px; }
-  .tile-orange-4:after {
-    content: "4"; }
-  .tile-orange-4:hover {
-    background-color: #8d5eed; }
-
-.tile-green-4 {
-  background-color: rgba(0, 255, 0, 0.333333);
-  width: 55px; }
-  .tile-green-4:after {
-    content: "4"; }
-  .tile-green-4:hover {
-    background-color: lime; }
-
-.tile-orange-5 {
-  background-color: rgba(147, 112, 219, 0.166667);
-  width: 10px; }
-  .tile-orange-5:after {
-    content: "5"; }
-  .tile-orange-5:hover {
-    background-color: #8d5eed; }
-
-.tile-green-5 {
-  background-color: rgba(0, 255, 0, 0.166667);
-  width: 87px; }
-  .tile-green-5:after {
-    content: "5"; }
-  .tile-green-5:hover {
-    background-color: lime; }
-
-.btn-1 {
-  color: #d5d52b;
-  background-color: #2b2bd5;
-  border: 2px solid grey;
-  width: 200px;
-  height: 50px;
-  font-size: 12px; }
-
-.btn-2 {
-  color: #dfdf20;
-  background-color: #2020df;
-  border: 2px solid grey;
-  width: 300px;
-  height: 75px;
-  font-size: 24px; }
-
-.btn-3 {
-  color: #e6e61a;
-  background-color: #1a1ae6;
-  border: 2px solid grey;
-  width: 400px;
-  height: 100px;
-  font-size: 36px; }
